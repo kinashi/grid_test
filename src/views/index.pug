@@ -1,0 +1,33 @@
+extends layouts/application.pug
+
+block content
+  header#header.l-header.header
+    .header__inner
+      h1.header__title header
+
+  nav#nav.l-nav.nav
+    h1.heading nav
+    ul
+      - for(var i = 0; i < 3; i++)
+        li: a(href="#") Link
+
+  aside#aside.l-aside.sub
+    h1.heading sub
+    ul
+      - for(var i = 0; i < 3; i++)
+        li: img(src="http://placehold.it/140x120/9e9e9e/fff")
+
+  main#main.l-main.main
+    section
+      h1.heading main
+
+      - for(var i = 0; i < 3; i++)
+        article.article
+          h1.article__title title
+          img.article__image(src="http://placehold.it/140x120/9e9e9e/fff")
+          p.article__text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  footer#footer.l-footer.footer
+    .footer__inner
+      p.footer__title footer

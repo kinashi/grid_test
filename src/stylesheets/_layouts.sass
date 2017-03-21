@@ -1,0 +1,51 @@
+body
+  display: grid
+
+  grid-template-rows: 80px 100px auto 80px
+  grid-template-columns: 1fr
+
+  @include mq-tablet
+    grid-template-rows: 120px auto auto auto 120px
+    grid-template-columns: 1fr 4fr
+
+  @include mq-pc
+    grid-template-columns: 1fr 180px 800px 1fr
+    min-width: 980px
+
+.l-header
+  @include mq-tablet
+    grid-row: 1 / span 1
+    grid-column: 1 / span 4
+
+.l-nav
+  @include mq-tablet
+    grid-row: 2 / span 1
+    grid-column: 1 / span 1
+
+  @include mq-pc
+    grid-column: 2 / span 1
+
+.l-aside
+  display: none
+
+  @include mq-tablet
+    display: block
+
+    grid-row: 3 / span 2
+    grid-column: 1 / span 1
+
+  @include mq-pc
+    grid-column: 2 / span 1
+
+.l-main
+  @include mq-tablet
+    grid-row: 2 / span 3
+    grid-column: 2 / span 1
+
+  @include mq-pc
+    grid-column: 3 / span 1
+
+.l-footer
+  @include mq-tablet
+    grid-row: 5
+    grid-column: 1 / span 4

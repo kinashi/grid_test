@@ -1,0 +1,22 @@
+.grid
+  display: grid
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  background: rgba($color-black, .4)
+
+  grid-template-rows: 80px 100px auto 80px
+  grid-template-columns: 1fr
+
+  @include mq-tablet
+    grid-template-rows: 120px auto auto auto 120px
+    grid-template-columns: 1fr 4fr
+
+  @include mq-pc
+    grid-template-columns: 1fr 180px 800px 1fr
+    min-width: 980px
+
+  &__cell
+    box-sizing: border-box
+    border: 2px dashed $color-white

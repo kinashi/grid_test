@@ -1,0 +1,17 @@
+.footer
+  padding: 10px
+  background-color: $color-footer
+
+  @include mq-tablet
+    padding: 20px
+
+  &__inner
+    box-sizing: border-box
+    margin: 0 auto
+
+    @include mq-pc
+      width: 980px
+      height: 100%
+
+  &__title
+    @extend %heading
